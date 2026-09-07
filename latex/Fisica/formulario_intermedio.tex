@@ -472,11 +472,11 @@
 \begin{itemize}
   \item \textbf{Ecuación Analítica:}
   \[
-    y(x, t) = [2A \sen(kx)] \cos(\omega t)
+    y(x, t) = [2A \sin(kx)] \cos(\omega t)
   \]
   \item \textbf{Posición de Nodos (Amplitud nula) (1):}
   \[
-    \sen(kx) = 0 \implies x_n = n \frac{\lambda}{2}
+    \sin(kx) = 0 \implies x_n = n \frac{\lambda}{2}
   \]
   \item \textbf{Posición de Nodos (Amplitud nula) (2):}
   \[
@@ -484,7 +484,7 @@
   \]
   \item \textbf{Posición de antinodos:}
   \[
-    |\sen(kx)| = 1 \implies x_a = \left( n + \frac{1}{2} \right) \frac{\lambda}{2}
+    |\sin(kx)| = 1 \implies x_a = \left( n + \frac{1}{2} \right) \frac{\lambda}{2}
   \]
   \item \textbf{Vientres (amplitud máxima $2a$):}
   \[
@@ -542,7 +542,7 @@
 \begin{itemize}
   \item \textbf{Ángulo de Mach ($\theta_M$) (1):}
   \[
-    \sen(\theta_M) = \frac{v}{v_s} = \frac{1}{M}
+    \sin(\theta_M) = \frac{v}{v_s} = \frac{1}{M}
   \]
   \item \textbf{Ángulo de Mach ($\theta_M$) (2):}
   \[
@@ -866,7 +866,7 @@
   \]
   \item \textbf{Campo eléctrico del dipolo:}
   \[
-    \vec{E}(r, \theta) = \frac{1}{4\pi\varepsilon_0 r^3} \left[ 3(\vec{p} \cdot \hat{r})\hat{r} - \vec{p} \right] = \frac{p}{4\pi\varepsilon_0 r^3} (2\cos\theta \hat{u}_r + \sen\theta \hat{u}_\theta)
+    \vec{E}(r, \theta) = \frac{1}{4\pi\varepsilon_0 r^3} \left[ 3(\vec{p} \cdot \hat{r})\hat{r} - \vec{p} \right] = \frac{p}{4\pi\varepsilon_0 r^3} (2\cos\theta \hat{u}_r + \sin\theta \hat{u}_\theta)
   \]
   \item \textbf{Torque y energía de un dipolo en campo externo (1):}
   \[
@@ -1279,7 +1279,7 @@
   \]
   \item \textbf{Ángulo de Mínima Desviación ($\delta_{\min}$):}
   \[
-    n = \frac{\sen\left( \frac{A + \delta_{\min}}{2} \right)}{\sen\left( \frac{A}{2} \right)}
+    n = \frac{\sin\left( \frac{A + \delta_{\min}}{2} \right)}{\sin\left( \frac{A}{2} \right)}
   \]
   \item \textbf{Número de Abbe / Potencia Dispersiva ($V_d$):}
   \[
@@ -1336,7 +1336,7 @@
 \begin{itemize}
   \item \textbf{Rendija Simple de Ancho $a$ (1):}
   \[
-    a \sen\theta = m \lambda
+    a \sin\theta = m \lambda
   \]
   \item \textbf{Rendija Simple de Ancho $a$ (2):}
   \[
@@ -1344,31 +1344,31 @@
   \]
   \item \textbf{Rendija Simple de Ancho $a$ (3):}
   \[
-    I(\theta) = I_0 \left[ \frac{\sen(\beta)}{\beta} \right]^2 = I_0 \operatorname{sinc}^2(\beta)
+    I(\theta) = I_0 \left[ \frac{\sin(\beta)}{\beta} \right]^2 = I_0 \operatorname{sinc}^2(\beta)
   \]
   \item \textbf{Rendija Simple de Ancho $a$ (4):}
   \[
-    \beta = \frac{\pi a}{\lambda}\sen\theta
+    \beta = \frac{\pi a}{\lambda}\sin\theta
   \]
   \item \textbf{Doble Rendija con Difracción e Interferencia Combinadas (1):}
   \[
-    I(\theta) = I_0 \cos^2(\alpha) \left[ \frac{\sen(\beta)}{\beta} \right]^2
+    I(\theta) = I_0 \cos^2(\alpha) \left[ \frac{\sin(\beta)}{\beta} \right]^2
   \]
   \item \textbf{Doble Rendija con Difracción e Interferencia Combinadas (2):}
   \[
-    \alpha = \frac{\pi d}{\lambda}\sen\theta
+    \alpha = \frac{\pi d}{\lambda}\sin\theta
   \]
   \item \textbf{Doble Rendija con Difracción e Interferencia Combinadas (3):}
   \[
-    \beta = \frac{\pi a}{\lambda}\sen\theta
+    \beta = \frac{\pi a}{\lambda}\sin\theta
   \]
   \item \textbf{Abertura Circular de Diámetro $D$ (Patrón de Airy):}
   \[
-    \sen\theta_{\min} \approx 1.22 \frac{\lambda}{D}
+    \sin\theta_{\min} \approx 1.22 \frac{\lambda}{D}
   \]
   \item \textbf{Redes de Difracción ($N$ rendijas, espaciado $d$) (1):}
   \[
-    d \sen\theta = m \lambda \quad m \in \mathbb{Z}
+    d \sin\theta = m \lambda \quad m \in \mathbb{Z}
   \]
   \item \textbf{Redes de Difracción ($N$ rendijas, espaciado $d$) (2):}
   \[
@@ -1386,7 +1386,7 @@
 \begin{itemize}
   \item \textbf{Coeficientes de Reflexión en Amplitud (1):}
   \[
-    r_\perp = \frac{n_1 \cos\theta_i - n_2 \cos\theta_t}{n_1 \cos\theta_i + n_2 \cos\theta_t} = -\frac{\sen(\theta_i - \theta_t)}{\sen(\theta_i + \theta_t)}
+    r_\perp = \frac{n_1 \cos\theta_i - n_2 \cos\theta_t}{n_1 \cos\theta_i + n_2 \cos\theta_t} = -\frac{\sin(\theta_i - \theta_t)}{\sin(\theta_i + \theta_t)}
   \]
   \item \textbf{Coeficientes de Reflexión en Amplitud (2):}
   \[
@@ -1394,11 +1394,11 @@
   \]
   \item \textbf{Coeficientes de Transmisión en Amplitud (1):}
   \[
-    t_\perp = \frac{2 n_1 \cos\theta_i}{n_1 \cos\theta_i + n_2 \cos\theta_t} = \frac{2 \sen\theta_t \cos\theta_i}{\sen(\theta_i + \theta_t)}
+    t_\perp = \frac{2 n_1 \cos\theta_i}{n_1 \cos\theta_i + n_2 \cos\theta_t} = \frac{2 \sin\theta_t \cos\theta_i}{\sin(\theta_i + \theta_t)}
   \]
   \item \textbf{Coeficientes de Transmisión en Amplitud (2):}
   \[
-    t_\parallel = \frac{2 n_1 \cos\theta_i}{n_2 \cos\theta_i + n_1 \cos\theta_t} = \frac{2 \sen\theta_t \cos\theta_i}{\sen(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
+    t_\parallel = \frac{2 n_1 \cos\theta_i}{n_2 \cos\theta_i + n_1 \cos\theta_t} = \frac{2 \sin\theta_t \cos\theta_i}{\sin(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
   \]
   \item \textbf{Reflectancia ($R$) y Transmitancia ($T_w$) de Potencia (1):}
   \[
@@ -1717,7 +1717,7 @@
 \begin{itemize}
   \item \textbf{Pozo de Potencial Infinito (Caja 1D de longitud $L$ en $[0, L]$) (1):}
   \[
-    \psi_n(x) = \sqrt{\frac{2}{L}}\sen\left( \frac{n\pi x}{L} \right)
+    \psi_n(x) = \sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)
   \]
   \item \textbf{Pozo de Potencial Infinito (Caja 1D de longitud $L$ en $[0, L]$) (2):}
   \[
@@ -1882,7 +1882,7 @@
 \begin{itemize}
   \item \textbf{Ley de Bragg para Difracción de Rayos X ($d_{hkl} = \text{espaciado interplanar}$):}
   \[
-    2 d_{hkl} \sen\theta = n \lambda \quad n \in \mathbb{N}
+    2 d_{hkl} \sin\theta = n \lambda \quad n \in \mathbb{N}
   \]
   \item \textbf{Espaciado Interplanar para Red Cúbica Simple (Parámetro de red $a$):}
   \[

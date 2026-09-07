@@ -630,7 +630,7 @@
   \]
   \item \textbf{Velocidad:}
   \[
-    v(t) = \frac{dx}{dt} = -\omega A \sen(\omega t + \phi) = \pm \omega \sqrt{A^2 - x^2}
+    v(t) = \frac{dx}{dt} = -\omega A \sin(\omega t + \phi) = \pm \omega \sqrt{A^2 - x^2}
   \]
   \item \textbf{Aceleración:}
   \[
@@ -666,7 +666,7 @@
 \begin{itemize}
   \item \textbf{Energía Cinética:}
   \[
-    E_k = \frac{1}{2} m v^2 = \frac{1}{2} m \omega^2 A^2 \sen^2(\omega t + \phi)
+    E_k = \frac{1}{2} m v^2 = \frac{1}{2} m \omega^2 A^2 \sin^2(\omega t + \phi)
   \]
   \item \textbf{Energía Potencial Elástica:}
   \[
@@ -686,7 +686,7 @@
   \[
     \omega_0 = \sqrt{\frac{k}{m}}, \quad T = 2\pi\sqrt{\frac{m}{k}}
   \]
-  \item \textbf{Péndulo Simple (Aproximación para ángulos pequeños $\sen\theta \approx \theta$):}
+  \item \textbf{Péndulo Simple (Aproximación para ángulos pequeños $\sin\theta \approx \theta$):}
   \[
     \omega_0 = \sqrt{\frac{g}{L}}, \quad T = 2\pi\sqrt{\frac{L}{g}}
   \]
@@ -791,11 +791,11 @@
 \begin{itemize}
   \item \textbf{Ecuación Diferencial Exacta:}
   \[
-    \ddot{\theta} + \omega_0^2 \sen(\theta) = 0
+    \ddot{\theta} + \omega_0^2 \sin(\theta) = 0
   \]
   \item \textbf{Periodo Exacto mediante Integrales Elípticas Completas de Primera Especie $K(m)$:}
   \[
-    T = 4\sqrt{\frac{L}{g}} K\left(\sen^2\left(\frac{\theta_0}{2}\right)\right) = 4\sqrt{\frac{L}{g}} \int_0^{\pi/2} \frac{d\phi}{\sqrt{1 - \sen^2\left(\frac{\theta_0}{2}\right) \sen^2\phi}}
+    T = 4\sqrt{\frac{L}{g}} K\left(\sin^2\left(\frac{\theta_0}{2}\right)\right) = 4\sqrt{\frac{L}{g}} \int_0^{\pi/2} \frac{d\phi}{\sqrt{1 - \sin^2\left(\frac{\theta_0}{2}\right) \sin^2\phi}}
   \]
   \item \textbf{Aproximación de Borda (Series de Taylor):}
   \[
@@ -825,7 +825,7 @@
 \begin{itemize}
   \item \textbf{Función de Onda Progresiva (hacia la derecha $-$ / hacia la izquierda $+$):}
   \[
-    y(x, t) = A \sen(k x \mp \omega t + \phi)
+    y(x, t) = A \sin(k x \mp \omega t + \phi)
   \]
   \item \textbf{Relación entre Parámetros Fundamentales:}
   \[
@@ -836,7 +836,7 @@
     v_y(x, t) = \frac{\partial y}{\partial t} = \mp \omega A \cos(k x \mp \omega t + \phi)
   \]
   \[
-    a_y(x, t) = \frac{\partial^2 y}{\partial t^2} = -\omega^2 A \sen(k x \mp \omega t + \phi) = -\omega^2 y(x, t)
+    a_y(x, t) = \frac{\partial^2 y}{\partial t^2} = -\omega^2 A \sin(k x \mp \omega t + \phi) = -\omega^2 y(x, t)
   \]
 \end{itemize}
 
@@ -974,7 +974,7 @@
 \begin{itemize}
   \item \textbf{Interferencia de dos ondas armónicas con diferencia de fase $\Delta\phi$:}
   \[
-    y_R(x, t) = \left[ 2A \cos\left(\frac{\Delta\phi}{2}\right) \right] \sen\left(kx - \omega t + \frac{\Delta\phi}{2}\right)
+    y_R(x, t) = \left[ 2A \cos\left(\frac{\Delta\phi}{2}\right) \right] \sin\left(kx - \omega t + \frac{\Delta\phi}{2}\right)
   \]
   \item \textbf{Condición de Interferencia Constructiva:}
   \[
@@ -1023,15 +1023,15 @@
 \begin{itemize}
   \item \textbf{Ecuación Analítica:}
   \[
-    y(x, t) = [2A \sen(kx)] \cos(\omega t)
+    y(x, t) = [2A \sin(kx)] \cos(\omega t)
   \]
   \item \textbf{Posición de Nodos (Amplitud nula):}
   \[
-    \sen(kx) = 0 \implies x_n = n \frac{\lambda}{2}, \quad n = 0, 1, 2, \dots
+    \sin(kx) = 0 \implies x_n = n \frac{\lambda}{2}, \quad n = 0, 1, 2, \dots
   \]
   \item \textbf{Posición de Antinodos o Vientres (Amplitud máxima $2A$):}
   \[
-    |\sen(kx)| = 1 \implies x_a = \left( n + \frac{1}{2} \right) \frac{\lambda}{2}, \quad n = 0, 1, 2, \dots
+    |\sin(kx)| = 1 \implies x_a = \left( n + \frac{1}{2} \right) \frac{\lambda}{2}, \quad n = 0, 1, 2, \dots
   \]
 \end{itemize}
 
@@ -1068,7 +1068,7 @@
 \begin{itemize}
   \item \textbf{Ángulo de Mach ($\theta_M$):}
   \[
-    \sen(\theta_M) = \frac{v}{v_s} = \frac{1}{M}, \quad M = \frac{v_s}{v} > 1
+    \sin(\theta_M) = \frac{v}{v_s} = \frac{1}{M}, \quad M = \frac{v_s}{v} > 1
   \]
 \end{itemize}
 
@@ -1085,7 +1085,7 @@
   \]
   \item \textbf{Onda de Presión Acústica Excedente:}
   \[
-    \Delta p(x, t) = -B \frac{\partial s}{\partial x} = \Delta p_{\text{máx}} \sen(kx - \omega t)
+    \Delta p(x, t) = -B \frac{\partial s}{\partial x} = \Delta p_{\text{máx}} \sin(kx - \omega t)
   \]
   \item \textbf{Amplitud de Presión:}
   \[
@@ -1951,7 +1951,7 @@
   \]
   \item \textbf{Campo eléctrico del dipolo:}
   \[
-    \vec{E}(r, \theta) = \frac{1}{4\pi\varepsilon_0 r^3} \left[ 3(\vec{p} \cdot \hat{r})\hat{r} - \vec{p} \right] = \frac{p}{4\pi\varepsilon_0 r^3} (2\cos\theta \hat{u}_r + \sen\theta \hat{u}_\theta)
+    \vec{E}(r, \theta) = \frac{1}{4\pi\varepsilon_0 r^3} \left[ 3(\vec{p} \cdot \hat{r})\hat{r} - \vec{p} \right] = \frac{p}{4\pi\varepsilon_0 r^3} (2\cos\theta \hat{u}_r + \sin\theta \hat{u}_\theta)
   \]
   \item \textbf{Torque y energía de un dipolo en campo externo:}
   \[
@@ -2196,13 +2196,13 @@
   \]
   \item \textbf{Potencia Compleja ($\mathbf{S}$):}
   \[
-    \mathbf{S} = \mathbf{V}_{\text{rms}} \mathbf{I}_{\text{rms}}^* = P + j Q = |\mathbf{S}| \cos\theta + j |\mathbf{S}| \sen\theta
+    \mathbf{S} = \mathbf{V}_{\text{rms}} \mathbf{I}_{\text{rms}}^* = P + j Q = |\mathbf{S}| \cos\theta + j |\mathbf{S}| \sin\theta
   \]
   \[
     P = V_{\text{rms}} I_{\text{rms}} \cos(\theta_v - \theta_i) \quad (\text{Potencia Activa, W})
   \]
   \[
-    Q = V_{\text{rms}} I_{\text{rms}} \sen(\theta_v - \theta_i) \quad (\text{Potencia Reactiva, VAR})
+    Q = V_{\text{rms}} I_{\text{rms}} \sin(\theta_v - \theta_i) \quad (\text{Potencia Reactiva, VAR})
   \]
   \[
     |\mathbf{S}| = V_{\text{rms}} I_{\text{rms}} \quad (\text{Potencia Aparente, VA})
@@ -2225,7 +2225,7 @@
 \begin{itemize}
   \item \textbf{Fuerza magnética sobre una carga en movimiento:}
   \[
-    \vec{F}_B = q (\vec{v} \times \vec{B}) \implies F_B = |q| v B \sen\theta
+    \vec{F}_B = q (\vec{v} \times \vec{B}) \implies F_B = |q| v B \sin\theta
   \]
   \item \textbf{Fuerza de Lorentz completa:}
   \[
@@ -2688,11 +2688,11 @@
   \]
   \item \textbf{Ley de Refracción (Ley de Snell):}
   \[
-    n_1 \sen(\theta_1) = n_2 \sen(\theta_2)
+    n_1 \sin(\theta_1) = n_2 \sin(\theta_2)
   \]
   \item \textbf{Ángulo Crítico y Reflexión Interna Total ($n_1 > n_2$):}
   \[
-    \sen(\theta_c) = \frac{n_2}{n_1} \implies \theta_c = \arcsen\left( \frac{n_2}{n_1} \right)
+    \sin(\theta_c) = \frac{n_2}{n_1} \implies \theta_c = \arcsen\left( \frac{n_2}{n_1} \right)
   \]
 \end{itemize}
 
@@ -2761,7 +2761,7 @@
   \]
   \item \textbf{Ángulo de Mínima Desviación ($\delta_{\min}$):}
   \[
-    n = \frac{\sen\left( \frac{A + \delta_{\min}}{2} \right)}{\sen\left( \frac{A}{2} \right)}
+    n = \frac{\sin\left( \frac{A + \delta_{\min}}{2} \right)}{\sin\left( \frac{A}{2} \right)}
   \]
   \item \textbf{Número de Abbe / Potencia Dispersiva ($V_d$):}
   \[
@@ -2837,11 +2837,11 @@
   \item \textbf{Experimento de la Doble Rendija de Young (Separación $d$, distancia a pantalla $D \gg d$):}
   \item \textbf{Máximos de Interferencia (Constructiva):}
   \[
-    d \sen\theta = m \lambda \implies y_{\text{máx}} \approx m \frac{\lambda D}{d}, \quad m \in \mathbb{Z}
+    d \sin\theta = m \lambda \implies y_{\text{máx}} \approx m \frac{\lambda D}{d}, \quad m \in \mathbb{Z}
   \]
   \item \textbf{Mínimos de Interferencia (Destructiva):}
   \[
-    d \sen\theta = \left( m + \frac{1}{2} \right)\lambda \implies y_{\text{mín}} \approx \left( m + \frac{1}{2} \right)\frac{\lambda D}{d}, \quad m \in \mathbb{Z}
+    d \sin\theta = \left( m + \frac{1}{2} \right)\lambda \implies y_{\text{mín}} \approx \left( m + \frac{1}{2} \right)\frac{\lambda D}{d}, \quad m \in \mathbb{Z}
   \]
   \item \textbf{Separación entre Franjas Consecutivas ($\Delta y$):}
   \[
@@ -2908,25 +2908,25 @@
   \item \textbf{Rendija Simple de Ancho $a$:}
   \item \textbf{Mínimos de difracción:}
   \[
-    a \sen\theta = m \lambda, \quad m = \pm 1, \pm 2, \dots
+    a \sin\theta = m \lambda, \quad m = \pm 1, \pm 2, \dots
   \]
   \item \textbf{Distribución de intensidad:}
   \[
-    I(\theta) = I_0 \left[ \frac{\sen(\beta)}{\beta} \right]^2 = I_0 \operatorname{sinc}^2(\beta), \quad \beta = \frac{\pi a}{\lambda}\sen\theta
+    I(\theta) = I_0 \left[ \frac{\sin(\beta)}{\beta} \right]^2 = I_0 \operatorname{sinc}^2(\beta), \quad \beta = \frac{\pi a}{\lambda}\sin\theta
   \]
   \item \textbf{Doble Rendija con Difracción e Interferencia Combinadas:}
   \[
-    I(\theta) = I_0 \cos^2(\alpha) \left[ \frac{\sen(\beta)}{\beta} \right]^2, \quad \alpha = \frac{\pi d}{\lambda}\sen\theta, \quad \beta = \frac{\pi a}{\lambda}\sen\theta
+    I(\theta) = I_0 \cos^2(\alpha) \left[ \frac{\sin(\beta)}{\beta} \right]^2, \quad \alpha = \frac{\pi d}{\lambda}\sin\theta, \quad \beta = \frac{\pi a}{\lambda}\sin\theta
   \]
   \item \textbf{Abertura Circular de Diámetro $D$ (Patrón de Airy):}
   \item \textbf{Primer anillo oscuro (Criterio de Rayleigh para resolución angular):}
   \[
-    \sen\theta_{\min} \approx 1.22 \frac{\lambda}{D}
+    \sin\theta_{\min} \approx 1.22 \frac{\lambda}{D}
   \]
   \item \textbf{Redes de Difracción ($N$ rendijas, espaciado $d$):}
   \item \textbf{Ecuación de la red (Máximos principales):}
   \[
-    d \sen\theta = m \lambda, \quad m \in \mathbb{Z}
+    d \sin\theta = m \lambda, \quad m \in \mathbb{Z}
   \]
   \item \textbf{Poder de Resolución Espectral ($R$):}
   \[
@@ -2944,17 +2944,17 @@
 \begin{itemize}
   \item \textbf{Coeficientes de Reflexión en Amplitud:}
   \[
-    r_\perp = \frac{n_1 \cos\theta_i - n_2 \cos\theta_t}{n_1 \cos\theta_i + n_2 \cos\theta_t} = -\frac{\sen(\theta_i - \theta_t)}{\sen(\theta_i + \theta_t)}
+    r_\perp = \frac{n_1 \cos\theta_i - n_2 \cos\theta_t}{n_1 \cos\theta_i + n_2 \cos\theta_t} = -\frac{\sin(\theta_i - \theta_t)}{\sin(\theta_i + \theta_t)}
   \]
   \[
     r_\parallel = \frac{n_2 \cos\theta_i - n_1 \cos\theta_t}{n_2 \cos\theta_i + n_1 \cos\theta_t} = \frac{\tan(\theta_i - \theta_t)}{\tan(\theta_i + \theta_t)}
   \]
   \item \textbf{Coeficientes de Transmisión en Amplitud:}
   \[
-    t_\perp = \frac{2 n_1 \cos\theta_i}{n_1 \cos\theta_i + n_2 \cos\theta_t} = \frac{2 \sen\theta_t \cos\theta_i}{\sen(\theta_i + \theta_t)}
+    t_\perp = \frac{2 n_1 \cos\theta_i}{n_1 \cos\theta_i + n_2 \cos\theta_t} = \frac{2 \sin\theta_t \cos\theta_i}{\sin(\theta_i + \theta_t)}
   \]
   \[
-    t_\parallel = \frac{2 n_1 \cos\theta_i}{n_2 \cos\theta_i + n_1 \cos\theta_t} = \frac{2 \sen\theta_t \cos\theta_i}{\sen(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
+    t_\parallel = \frac{2 n_1 \cos\theta_i}{n_2 \cos\theta_i + n_1 \cos\theta_t} = \frac{2 \sin\theta_t \cos\theta_i}{\sin(\theta_i + \theta_t)\cos(\theta_i - \theta_t)}
   \]
   \item \textbf{Reflectancia ($R$) y Transmitancia ($T_w$) de Potencia:}
   \[
@@ -3110,7 +3110,7 @@
 \begin{itemize}
   \item \textbf{Apertura Numérica ($\text{NA}$):}
   \[
-    \text{NA} = \sen(\theta_{\text{máx}}) = \sqrt{n_{\text{núcleo}}^2 - n_{\text{revestimiento}}^2} \approx n_1 \sqrt{2\Delta}, \quad \Delta = \frac{n_1 - n_2}{n_1}
+    \text{NA} = \sin(\theta_{\text{máx}}) = \sqrt{n_{\text{núcleo}}^2 - n_{\text{revestimiento}}^2} \approx n_1 \sqrt{2\Delta}, \quad \Delta = \frac{n_1 - n_2}{n_1}
   \]
   \item \textbf{Parámetro de Frecuencia Normalizada (Número $V$ para fibra de radio $a$):}
   \[
@@ -3471,7 +3471,7 @@
   \]
   \item \textbf{Métrica de Schwarzschild (Masa esférica estática en el vacío):}
   \[
-    ds^2 = -\left( 1 - \frac{r_s}{r} \right) c^2 dt^2 + \left( 1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 (d\theta^2 + \sen^2\theta \, d\phi^2)
+    ds^2 = -\left( 1 - \frac{r_s}{r} \right) c^2 dt^2 + \left( 1 - \frac{r_s}{r} \right)^{-1} dr^2 + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
   \]
   \item \textbf{Radio de Schwarzschild (Horizonte de sucesos):}
   \[
@@ -3562,7 +3562,7 @@
 \begin{itemize}
   \item \textbf{Pozo de Potencial Infinito (Caja 1D de longitud $L$ en $[0, L]$):}
   \[
-    \psi_n(x) = \sqrt{\frac{2}{L}}\sen\left( \frac{n\pi x}{L} \right), \quad E_n = \frac{n^2 \pi^2 \hbar^2}{2m L^2} = \frac{n^2 h^2}{8m L^2}, \quad n = 1, 2, 3, \dots
+    \psi_n(x) = \sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right), \quad E_n = \frac{n^2 \pi^2 \hbar^2}{2m L^2} = \frac{n^2 h^2}{8m L^2}, \quad n = 1, 2, 3, \dots
   \]
   \item \textbf{Oscilador Armónico Cuántico Simple ($\omega = \sqrt{k/m}$):}
   \[
@@ -3849,7 +3849,7 @@
 \begin{itemize}
   \item \textbf{Ley de Bragg para Difracción de Rayos X ($d_{hkl} = \text{espaciado interplanar}$):}
   \[
-    2 d_{hkl} \sen\theta = n \lambda, \quad n \in \mathbb{N}
+    2 d_{hkl} \sin\theta = n \lambda, \quad n \in \mathbb{N}
   \]
   \item \textbf{Espaciado Interplanar para Red Cúbica Simple (Parámetro de red $a$):}
   \[

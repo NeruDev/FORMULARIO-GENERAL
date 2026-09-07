@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Matemáticas en Cálculo Integral}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+El cálculo integral es la rama de las matemáticas orientada al cálculo de áreas, volúmenes, acumulaciones y la inversión de la derivación. Las constantes en cálculo integral surgen frecuentemente como valores de integrales definidas impropias o representaciones de la función Zeta de Riemann y constantes de integración universales.
+
+\section{Logaritmo Natural de 2 ($\ln 2$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Denotado por $\ln 2$ o $\log_e 2$, se define de forma natural en cálculo integral como la integral definida de la función recíproca entre $1$ y $2$:
+\begin{equation*}
+\ln 2 = \int_{1}^{2} \frac{1}{x} \, dx
+\end{equation*}
+Aparece constantemente al evaluar integrales por partes, integrales por sustitución trigonométrica, al calcular el tiempo de vida media ($T_{1/2} = \frac{\ln 2}{\lambda}$) y en la suma de la serie armónica alternada ($\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k} = \ln 2$).
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+\begin{equation*}
+\ln 2 \approx 0.6931 \quad \text{o} \quad 0.69314718
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\ln 2 \approx 0.693147180559945
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\ln 2 \approx \; & 0.69314718055994530941723212145817656807550013436025525412068000949339... \\
+& ...3621969694715605863326996418687542001
+\end{align*}
+\textbf{Margen de error:} Constante matemática pura (sin margen de error).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Constante de Apéry ($\zeta(3)$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada como $\zeta(3)$, es el valor de la función Zeta de Riemann evaluada en el entero $3$. Posee una representación directa como integral múltiple impropia:
+\begin{equation*}
+\zeta(3) = \sum_{n=1}^{\infty} \frac{1}{n^3} = \frac{1}{2} \int_{0}^{1} \int_{0}^{1} \int_{0}^{1} \frac{1}{1 - xyz} \, dx \, dy \, dz
+\end{equation*}
+En 1978, Roger Apéry demostró que es un número irracional. Surge de manera crucial en la integración de diagramas de Feynman en electrodinámica cuántica y física estadística.
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+\begin{equation*}
+\zeta(3) \approx 1.2021 \quad \text{o} \quad 1.20205690
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\zeta(3) \approx 1.202056903159594
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\zeta(3) \approx \; & 1.20205690315959428539973816151144999076498629234049888179227155534183... \\
+& ...82057863130901864558736093352581462
+\end{align*}
+\textbf{Margen de error:} Constante matemática pura (sin incertidumbre).
+
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Físicas en Acústica}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La acústica es la rama de la física que estudia las ondas mecánicas en medios gaseosos, líquidos y sólidos, abarcando vibraciones, sonido, ultrasonido e infrasonido. Sus constantes de referencia definen la propagación ondulatoria y los umbrales de audición humana.
+
+\section{Velocidad del Sonido en Aire Estándar Seco ($c_s$ o $v_s$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada por $c_s$ (o $v_s$), es la velocidad de propagación de una onda de presión longitudinal a través del aire seco a la temperatura de referencia de $0^\circ\text{C}$ ($273.15\text{ K}$) y $1\text{ atm}$ de presión. Se rige por la ecuación de Laplace:
+\begin{equation*}
+c_s = \sqrt{\frac{\gamma R T}{M}}
+\end{equation*}
+donde $\gamma \approx 1.40$ es el índice adiabático del aire, $R$ la constante de los gases y $M$ la masa molar del aire seco.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+A $20^\circ\text{C}$ (temperatura ambiente habitual en ingeniería acústica):
+\begin{equation*}
+c_s \approx 343 \text{ m/s} \quad \text{o} \quad 343.2 \text{ m/s}
+\end{equation*}
+A $0^\circ\text{C}$ (estándar ISO 2533):
+\begin{equation*}
+c_s \approx 331.3 \text{ m/s}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Valor Estándar ISO}
+Según la Atmósfera Estándar Internacional (ISO 2533) a $T_0 = 273.15\text{ K}$ ($0^\circ\text{C}$) y $P_0 = 101325\text{ Pa}$:
+\begin{equation*}
+c_s = 331.300000000000 \text{ m/s} \quad \text{(A } 0^\circ\text{C)}
+\end{equation*}
+A $20^\circ\text{C}$ ($293.15\text{ K}$):
+\begin{equation*}
+c_s = 343.210000000000 \text{ m/s}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} En aire real, la humedad relativa, la concentración de $\text{CO}_2$ y pequeños cambios térmicos introducen un margen de error experimental empírico de $\pm 0.1 \text{ m/s}$ ($\approx 0.03\%$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Intensidad Sonora de Referencia Umbral ($I_0$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada como $I_0$, es el valor estándar internacional para el umbral mínimo de audición humana para una onda senoidal pura a la frecuencia de $1000 \text{ Hz}$. Es la constante de normalización utilizada para calcular el Nivel de Presión Sonora (SPL) en decibelios ($dB_{SPL}$):
+\begin{equation*}
+L_I = 10 \log_{10} \left( \frac{I}{I_0} \right)
+\end{equation*}
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+I_0 = 10^{-12} \text{ W/m}^2 \quad \text{o} \quad 1 \text{ pW/m}^2
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Definición Exacta}
+Fijada exactamente por norma internacional (ISO 80000-8):
+\begin{equation*}
+I_0 = 1.000000000000000 \times 10^{-12} \text{ W/m}^2
+\end{equation*}
+Presión acústica de referencia correspondiente en aire ($p_0$):
+\begin{equation*}
+p_0 = 2.000000000000000 \times 10^{-5} \text{ Pa} \quad (20 \text{ }\mu\text{Pa})
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Exacto por definición de referencia internacional de ingeniería ($u_r = 0$).
+
+\end{document}

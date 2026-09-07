@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Termodinámica}}
+\author{Física General y Termofísica}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La termodinámica estudia la energía, el calor, el trabajo y las transformaciones de estado en sistemas macroscópicos. A continuación se detallan las fórmulas fundamentales con sus unidades en el Sistema Internacional (SI), desarrollos matemáticos y sus autores.
+
+\section{Ecuaciones de Estado y Gases}
+
+\subsection{Gases Ideales y Reales}
+
+\subsubsection*{1. Ley de los Gases Ideales [$P, V, T$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Presión [$P$]: $[\text{kg}\cdot\text{m}^{-1}\cdot\text{s}^{-2}]$
+    \item Volumen [$V$]: $[\text{m}^3]$
+    \item Temperatura [$T$]: $[\text{K}]$
+\end{itemize}
+\paragraph*{Explicación:} Relaciona las variables de estado de un gas ideal en equilibrio termodinámico.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Forma molar estándar:} \quad & P V = n R T \\
+\text{Forma molecular (Boltzmann):} \quad & P V = N k_B T \\
+\text{Forma con densidad ($\rho$):} \quad & P = \frac{\rho R T}{M}
+\end{align*}
+donde $n$ es el número de moles, $N$ el número de moléculas, $R$ la constante universal de los gases, $k_B$ la constante de Boltzmann y $M$ la masa molar $[\text{kg}\cdot\text{mol}^{-1}]$.
+\paragraph*{Autor:} Émile Clapeyron / Robert Boyle / Jacques Charles.
+
+\subsubsection*{2. Ecuación de Estado de Van der Waals [$P$]}
+\paragraph*{Unidades básicas del SI:} Presión [$P$]: $[\text{kg}\cdot\text{m}^{-1}\cdot\text{s}^{-2}]$
+\paragraph*{Explicación:} Modificación de la ley de los gases ideales para modelar el comportamiento de gases reales considerando las fuerzas de atracción intermoleculares y el volumen finito ocupado por las moléculas.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Forma molar:} \quad & \left( P + a \frac{n^2}{V^2} \right) (V - n b) = n R T \\
+\text{Forma por volumen molar ($v_m = V/n$):} \quad & \left( P + \frac{a}{v_m^2} \right) (v_m - b) = R T
+\end{align*}
+donde $a$ representa la atracción intermolecular y $b$ el volumen excluido por mol (covolumen).
+\paragraph*{Autor:} Johannes Diderik van der Waals.
+
+\section{Leyes de la Termodinámica}
+
+\subsection{Primera Ley de la Termodinámica}
+
+\subsubsection*{3. Conservación de la Energía y Calor [$U, Q, W$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Energía interna, Calor y Trabajo [$U, Q, W$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}]$
+\end{itemize}
+\paragraph*{Explicación:} Establece que la energía no se crea ni se destruye, solo se transforma; la variación de energía interna de un sistema es igual al calor neto absorbido menos el trabajo neto realizado por el sistema.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Forma diferencial general:} \quad & dU = \delta Q - \delta W \\
+\text{Trabajo cuasiestático de expansión:} \quad & W = \int_{V_1}^{V_2} P dV \\
+\text{Proceso Isocórico ($V=\text{cte}$):} \quad & \Delta U = Q = n C_v \Delta T \\
+\text{Proceso Isobárico ($P=\text{cte}$):} \quad & Q = n C_p \Delta T, \quad W = P \Delta V \\
+\text{Proceso Isotérmico ($T=\text{cte}$, gas ideal):} \quad & \Delta U = 0 \implies Q = W = n R T \ln\left(\frac{V_2}{V_1}\right) \\
+\text{Proceso Adiabático ($Q=0$, gas ideal):} \quad & \Delta U = -W, \quad P V^\gamma = \text{constante} \quad \left(\gamma = \frac{C_p}{C_v}\right)
+\end{align*}
+\paragraph*{Autor:} Rudolf Clausius / Julius Robert von Mayer / James Prescott Joule.
+
+\subsection{Segunda Ley de la Termodinámica y Entropía}
+
+\subsubsection*{4. Entropía y Rendimiento de Carnot [$S, \eta$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Entropía [$S$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}\cdot\text{K}^{-1}]$
+    \item Rendimiento térmico [$\eta$]: Adimensional $[1]$
+\end{itemize}
+\paragraph*{Explicación:} Define la dirección de los procesos irreversibles y el límite teórico máximo de eficiencia para una máquina térmica operando entre dos fuentes de temperatura.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Definición macroscópica de entropía:} \quad & dS = \frac{\delta Q_{\text{rev}}}{T} \implies \Delta S = \int_{1}^{2} \frac{\delta Q_{\text{rev}}}{T} \\
+\text{Definición estadística de Boltzmann:} \quad & S = k_B \ln \Omega \\
+\text{Eficiencia térmica general:} \quad & \eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H} \\
+\text{Eficiencia máxima de Carnot:} \quad & \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}
+\end{align*}
+donde $T_H$ y $T_C$ son las temperaturas de las fuentes caliente y fría respectivamente.
+\paragraph*{Autor:} Nicolas Léonard Sadi Carnot / Rudolf Clausius / Ludwig Boltzmann.
+
+\end{document}

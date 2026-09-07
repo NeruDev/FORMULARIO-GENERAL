@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Óptica}}
+\author{Física Óptica y Fotónica}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La óptica es la rama de la física que analiza el comportamiento y propagación de la luz. Se divide en óptica geométrica (rayos) y óptica física (ondas y fotones). A continuación se muestran sus fórmulas principales con sus unidades fundamentales en el SI.
+
+\section{Óptica Geométrica}
+
+\subsection{Reflexión y Refracción}
+
+\subsubsection*{1. Leyes de Refracción y Reflexión [$n, \theta$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Índice de refracción [$n$]: Adimensional $[1]$
+    \item Ángulos [$\theta$]: Radianes $[\text{rad}]$ (adimensional $[1]$)
+\end{itemize}
+\paragraph*{Explicación:} Describen el cambio de dirección que experimenta un rayo de luz al incidir sobre la interfaz entre dos medios transparentes.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Índice de refracción:} \quad & n = \frac{c}{v} \\
+\text{Ley de reflexión:} \quad & \theta_i = \theta_r \\
+\text{Ley de Snell (refracción):} \quad & n_1 \sin\theta_1 = n_2 \sin\theta_2 \\
+\text{Ángulo límite (reflexión total interna):} \quad & \theta_c = \arcsin\left(\frac{n_2}{n_1}\right) \quad (n_1 > n_2)
+\end{align*}
+donde $c$ es la velocidad de la luz en el vacío y $v$ la velocidad de la luz en el medio.
+\paragraph*{Autor:} Willebrord Snellius / René Descartes.
+
+\subsection{Lentes y Espejos}
+
+\subsubsection*{2. Ecuación de los Lentes Delgados y Espejos [$f, s, s', P$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Distancias focal, de objeto e imagen [$f, s, s'$]: $[\text{m}]$
+    \item Potencia óptica [$P$]: $[\text{m}^{-1}]$
+\end{itemize}
+\paragraph*{Explicación:} Relaciona las distancias del objeto y de la imagen respecto al centro óptico de la lente o espejo con su distancia focal.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Ecuación de Gauss / Descartes:} \quad & \frac{1}{f} = \frac{1}{s} + \frac{1}{s'} \\
+\text{Potencia óptica (dioptrías):} \quad & P = \frac{1}{f} \\
+\text{Aumento lateral ($M$):} \quad & M = \frac{y'}{y} = -\frac{s'}{s} \\
+\text{Ecuación del tallador de lentes (en aire):} \quad & \frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)
+\end{align*}
+donde $R_1$ y $R_2$ son los radios de curvatura de las superficies de la lente.
+\paragraph*{Autor:} René Descartes / Carl Friedrich Gauss.
+
+\section{Óptica Física y Cuántica}
+
+\subsection{Radiación de Cuerpo Negro}
+
+\subsubsection*{3. Leyes de Radiación [$E, \lambda_{\max}, M_e$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Longitud de onda [$\lambda$]: $[\text{m}]$
+    \item Exmitancia radiante [$M_e$]: $[\text{kg}\cdot\text{s}^{-3}]$
+\end{itemize}
+\paragraph*{Explicación:} Describen la distribución espectral y la potencia emitida por un cuerpo negro perfecto en función de la temperatura.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Ley de Planck (Radiancia Espectral):} \quad & B_\lambda(\lambda, T) = \frac{2 \pi h c^2}{\lambda^5 \left(e^{\frac{h c}{\lambda k_B T}} - 1\right)} \\
+\text{Ley de Desplazamiento de Wien:} \quad & \lambda_{\max} T = b \quad (b \approx 2.8977 \times 10^{-3} \text{ m}\cdot\text{K}) \\
+\text{Ley de Stefan-Boltzmann:} \quad & M_e = \sigma T^4
+\end{align*}
+donde $\sigma$ es la constante de Stefan-Boltzmann y $b$ la constante de Wien.
+\paragraph*{Autor:} Max Planck / Wilhelm Wien / Josef Stefan / Ludwig Boltzmann.
+
+\end{document}

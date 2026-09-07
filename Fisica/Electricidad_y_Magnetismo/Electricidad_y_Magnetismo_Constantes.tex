@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Físicas en Electricidad y Magnetismo}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+El electromagnetismo describe las fuerzas entre cargas eléctricas, los campos magnéticos y la propagación de ondas electromagnéticas a través de las ecuaciones de Maxwell. Tras la redefinición del SI en 2019, la carga elemental pasó a ser una constante numérica fija.
+
+\section{Carga Elemental ($e$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada por la letra $e$, es la magnitud absoluta de la carga eléctrica transportada por un solo protón (o electrón, en valor absoluto). Es el cuanto fundamental de carga en la naturaleza y la unidad básica de cuantización eléctrica.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+e \approx 1.602 \times 10^{-19} \text{ C} \quad \text{o} \quad 1.60217663 \times 10^{-19} \text{ C}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Definición Exacta (SI 2019)}
+Fijada exactamente en la redefinición del SI de 2019 para definir el Amperio (A):
+\begin{equation*}
+e = 1.602176634 \times 10^{-19} \text{ C} \quad \text{(Coulombs, A}\cdot\text{s)}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Exacto sin incertidumbre ($u_r = 0$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Permeabilidad Magnética del Vacío ($\mu_0$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada por $\mu_0$, representa la capacidad del vacío para permitir el paso y la inducción de líneas de campo magnético. Relaciona la intensidad de campo magnético ($\mathbf{H}$) con la inducción magnética ($\mathbf{B}$).
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+\mu_0 \approx 4\pi \times 10^{-7} \text{ H/m} \approx 1.2566 \times 10^{-6} \text{ N/A}^2 \text{ o H/m}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Valor CODATA (Post-2019)}
+Antes de 2019 era $4\pi \times 10^{-7} \text{ H/m}$ exacto. Tras la fijación de $e$, su valor se determina experimentalmente con alta precisión:
+\begin{equation*}
+\mu_0 = 1.25663706212(19) \times 10^{-6} \text{ N}\cdot\text{A}^{-2} \quad \text{o H/m}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:}
+\begin{align*}
+\text{Incertidumbre absoluta: } & u(\mu_0) = 0.00000000019 \times 10^{-6} \text{ H/m} \\
+\text{Incertidumbre relativa: } & u_r = 1.5 \times 10^{-10}
+\end{align*}
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Permitividad Eléctrica del Vacío ($\varepsilon_0$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada por $\varepsilon_0$, representa la capacidad del vacío para permitir el establecimiento de un campo eléctrico y almacenar energía electrostática. Aparece en la Ley de Coulomb y relaciona el desplazamiento eléctrico ($\mathbf{D}$) con el campo eléctrico ($\mathbf{E}$). Se vincula con $c$ y $\mu_0$ mediante $\varepsilon_0 = \frac{1}{\mu_0 c^2}$.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+\varepsilon_0 \approx 8.854 \times 10^{-12} \text{ F/m} \quad \text{o} \quad 8.85418782 \times 10^{-12} \text{ F/m}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Valor CODATA (Post-2019)}
+\begin{equation*}
+\varepsilon_0 = 8.8541878128(13) \times 10^{-12} \text{ F/m}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:}
+\begin{align*}
+\text{Incertidumbre absoluta: } & u(\varepsilon_0) = 0.0000000013 \times 10^{-12} \text{ F/m} \\
+\text{Incertidumbre relativa: } & u_r = 1.5 \times 10^{-10}
+\end{align*}
+
+\end{document}

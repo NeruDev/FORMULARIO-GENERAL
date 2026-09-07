@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Física Moderna}}
+\author{Física Cuántica y Relatividad}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La física moderna comprende la teoría de la relatividad y la mecánica cuántica, disciplinas que revolucionaron la comprensión del espacio, el tiempo y la naturaleza corpuscular/ondulatoria de la materia. A continuación se presentan las fórmulas fundamentales con sus unidades básicas del SI.
+
+\section{Relatividad Especial}
+
+\subsection{Cinemática y Dinámica Relativista}
+
+\subsubsection*{1. Transformaciones de Lorentz y Energía Relativista [$\gamma, E, p$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Factor de Lorentz [$\gamma$]: Adimensional $[1]$
+    \item Energía [$E$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}]$
+    \item Momento lineal relativista [$p$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-1}]$
+\end{itemize}
+\paragraph*{Explicación:} Describen cómo cambian las mediciones de espacio, tiempo, masa y energía para observadores en sistemas de referencia inerciales con velocidad relativa constante.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Factor de Lorentz:} \quad & \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+\text{Dilatación del tiempo:} \quad & \Delta t = \gamma \Delta t_0 \\
+\text{Contracción de la longitud:} \quad & L = \frac{L_0}{\gamma} \\
+\text{Masa en reposo y energía equivalente:} \quad & E_0 = m_0 c^2 \\
+\text{Energía total relativista:} \quad & E = \gamma m_0 c^2 = E_k + m_0 c^2 \\
+\text{Relación Energía-Momento:} \quad & E^2 = (p c)^2 + (m_0 c^2)^2
+\end{align*}
+donde $m_0$ es la masa en reposo, $c$ la velocidad de la luz y $v$ la velocidad relativa.
+\paragraph*{Autor:} Albert Einstein / Hendrik Lorentz.
+
+\section{Física Cuántica y Ondular}
+
+\subsection{Cuantización de la Radiación y Materia}
+
+\subsubsection*{2. Efecto Fotoeléctrico y Longitud de Onda de De Broglie [$E, \phi, \lambda_{dB}$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Energía y Función de trabajo [$E, \phi$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}]$
+    \item Longitud de onda de De Broglie [$\lambda_{dB}$]: $[\text{m}]$
+\end{itemize}
+\paragraph*{Explicación:} Establece la naturaleza dual onda-partícula de la luz y de la materia, donde los fotones transfieren cuantiosa energía y las partículas materiales manifiestan comportamiento ondulatorio.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Energía del fotón (Planck-Einstein):} \quad & E = h \nu = \hbar \omega \\
+\text{Ecuación fotoeléctrica de Einstein:} \quad & E_{k,\max} = h \nu - \phi = e V_s \\
+\text{Longitud de onda de De Broglie:} \quad & \lambda_{dB} = \frac{h}{p} = \frac{h}{m v}
+\end{align*}
+donde $h$ es la constante de Planck, $\nu$ la frecuencia, $\phi$ la función de trabajo del metal y $V_s$ el potencial de frenado.
+\paragraph*{Autor:} Albert Einstein / Max Planck / Louis de Broglie.
+
+\subsection{Mecánica Cuántica Teórica}
+
+\subsubsection*{3. Ecuación de Schrödinger y Principio de Incertidumbre [$\Psi, \Delta x, \Delta p$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Función de onda en 1D [$\Psi(x,t)$]: $[\text{m}^{-1/2}]$
+    \item Incertidumbre de posición [$\Delta x$]: $[\text{m}]$
+    \item Incertidumbre de momento [$\Delta p$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-1}]$
+\end{itemize}
+\paragraph*{Explicación:} Governa la evolución temporal y espacial del estado cuántico de una partícula y establece los límites fundamentales de precisión simultánea en la medición de observables complementarios.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Ecuación de Schrödinger dependiente del tiempo (1D):} \quad & i \hbar \frac{\partial \Psi(x,t)}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi(x,t)}{\partial x^2} + V(x) \Psi(x,t) \\
+\text{Ecuación de Schrödinger independiente del tiempo:} \quad & \hat{H} \psi(x) = E \psi(x) \\
+\text{Principio de Incertidumbre Posición-Momento:} \quad & \Delta x \Delta p \ge \frac{\hbar}{2} \\
+\text{Principio de Incertidumbre Energía-Tiempo:} \quad & \Delta E \Delta t \ge \frac{\hbar}{2}
+\end{align*}
+donde $\hat{H}$ es el operador Hamiltoniano y $\hbar = \frac{h}{2\pi}$.
+\paragraph*{Autor:} Erwin Schrödinger / Werner Heisenberg.
+
+\end{document}

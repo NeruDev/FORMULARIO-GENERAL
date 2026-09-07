@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Electricidad y Magnetismo}}
+\author{Física Electromagnética y Teoría de Campos}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+El electromagnetismo estudia los fenómenos eléctricos y magnéticos y su unificación mediante campos. A continuación se exponen las fórmulas de electrostática, magnetostática y las Ecuaciones de Maxwell con sus unidades fundamentales en el SI.
+
+\section{Electrostática}
+
+\subsection{Fuerza y Campo Eléctrico}
+
+\subsubsection*{1. Ley de Coulomb y Campo Eléctrico [$F_e, \mathbf{E}, V$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Fuerza eléctrica [$F_e$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-2}]$
+    \item Campo eléctrico [$\mathbf{E}$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-3}\cdot\text{A}^{-1}]$
+    \item Potencial eléctrico [$V$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-3}\cdot\text{A}^{-1}]$
+\end{itemize}
+\paragraph*{Explicación:} Cuantifica la fuerza de atracción o repulsión entre cargas puntuales estacionarias y el campo y potencial generados por las mismas.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Fuerza de Coulomb (forma escalar):} \quad & F_e = \frac{1}{4\pi\varepsilon_0} \frac{|q_1 q_2|}{r^2} \\
+\text{Campo eléctrico puntual:} \quad & \mathbf{E} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{\mathbf{r}} \\
+\text{Potencial eléctrico puntual:} \quad & V = \frac{1}{4\pi\varepsilon_0} \frac{q}{r} \\
+\text{Relación entre campo y potencial:} \quad & \mathbf{E} = -\boldsymbol{\nabla} V
+\end{align*}
+donde $\varepsilon_0$ es la permitividad del vacío.
+\paragraph*{Autor:} Charles-Augustin de Coulomb.
+
+\section{Ecuaciones del Electromagnetismo}
+
+\subsection{Ecuaciones de Maxwell}
+
+\subsubsection*{2. Grupo de Ecuaciones de Maxwell [$\mathbf{E}, \mathbf{B}$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Campo eléctrico [$\mathbf{E}$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-3}\cdot\text{A}^{-1}]$
+    \item Campo magnético / Inducción magnética [$\mathbf{B}$]: $[\text{kg}\cdot\text{s}^{-2}\cdot\text{A}^{-1}]$
+    \item Densidad de carga [$\rho_e$]: $[\text{A}\cdot\text{s}\cdot\text{m}^{-3}]$
+    \item Densidad de corriente [$\mathbf{J}$]: $[\text{A}\cdot\text{m}^{-2}]$
+\end{itemize}
+\paragraph*{Explicación:} Conjunto de cuatro ecuaciones fundamentales que describen por completo el comportamiento de los campos eléctricos y magnéticos y sus interacciones con la materia.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{1. Ley de Gauss para la electricidad (Forma diferencial):} \quad & \boldsymbol{\nabla} \cdot \mathbf{E} = \frac{\rho_e}{\varepsilon_0} \\
+\text{Ley de Gauss para la electricidad (Forma integral):} \quad & \Phi_E = \oint_S \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0} \\[6pt]
+\text{2. Ley de Gauss para el magnetismo (Forma diferencial):} \quad & \boldsymbol{\nabla} \cdot \mathbf{B} = 0 \\
+\text{Ley de Gauss para el magnetismo (Forma integral):} \quad & \Phi_B = \oint_S \mathbf{B} \cdot d\mathbf{A} = 0 \\[6pt]
+\text{3. Ley de Faraday-Lenz (Forma diferencial):} \quad & \boldsymbol{\nabla} \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \\
+\text{Ley de Faraday-Lenz (Forma integral):} \quad & \oint_C \mathbf{E} \cdot d\mathbf{\ell} = -\frac{d\Phi_B}{dt} = \mathcal{E} \\[6pt]
+\text{4. Ley de Ampère-Maxwell (Forma diferencial):} \quad & \boldsymbol{\nabla} \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \\
+\text{Ley de Ampère-Maxwell (Forma integral):} \quad & \oint_C \mathbf{B} \cdot d\mathbf{\ell} = \mu_0 I_{\text{enc}} + \mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}
+\end{align*}
+\paragraph*{Autor:} James Clerk Maxwell (englobando contribuciones de Carl Friedrich Gauss, Michael Faraday y André-Marie Ampère).
+
+\section{Fuerzas Magnéticas y Circuitos}
+
+\subsection{Fuerza de Lorentz y Ley de Ohm}
+
+\subsubsection*{3. Fuerza de Lorentz y Ley de Ohm [$\mathbf{F}, I, R$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Fuerza de Lorentz [$\mathbf{F}$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-2}]$
+    \item Corriente eléctrica [$I$]: $[\text{A}]$
+    \item Resistencia eléctrica [$R$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-3}\cdot\text{A}^{-2}]$
+\end{itemize}
+\paragraph*{Explicación:} Describe la fuerza ejercida sobre una carga en movimiento dentro de campos eléctricos y magnéticos, así como la relación de conducción eléctrica en circuitos.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Fuerza de Lorentz completa:} \quad & \mathbf{F} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B}) \\
+\text{Fuerza magnética sobre un conductor:} \quad & \mathbf{F} = I (\mathbf{L} \times \mathbf{B}) \\
+\text{Ley de Ohm macroscópica:} \quad & V = I R \\
+\text{Ley de Ohm microscópica:} \quad & \mathbf{J} = \sigma \mathbf{E}
+\end{align*}
+donde $q$ es la carga, $\mathbf{v}$ la velocidad, $I$ la intensidad de corriente y $\sigma$ la conductividad eléctrica.
+\paragraph*{Autor:} Hendrik Lorentz / Georg Simon Ohm.
+
+\end{document}

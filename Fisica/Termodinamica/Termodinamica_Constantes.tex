@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Físicas en Termodinámica}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La termodinámica es la rama de la física que estudia el calor, la temperatura, el trabajo y la energía en sistemas macroscópicos. A partir de la redefinición del Sistema Internacional de Unidades (SI) en 2019, la constante de Boltzmann y la constante de Avogadro han pasado a ser constantes fijadas con un valor numérico exacto.
+
+\section{Constante de Boltzmann ($k$ o $k_B$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada por $k_B$ (o $k$), es la constante física que relaciona la temperatura termodinámica media de un sistema con la energía cinética microscópica de las partículas que lo componen ($E_k = \frac{3}{2} k_B T$). Es la constante fundamental que vincula la física estadística con la termodinámica macroscópica y aparece en la fórmula de la entropía de Boltzmann: $S = k_B \ln \Omega$.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+k_B \approx 1.381 \times 10^{-23} \text{ J/K} \quad \text{o} \quad 8.617 \times 10^{-5} \text{ eV/K}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Definición Exacta (SI 2019)}
+Desde la redefinición del SI en mayo de 2019, la constante de Boltzmann se ha fijado exactamente para definir el Kelvin (K):
+\begin{equation*}
+k_B = 1.380649 \times 10^{-23} \text{ J}\cdot\text{K}^{-1} \quad \text{o} \text{ J/K}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Exacto por definición ($u_r = 0$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Constante de Avogadro ($N_A$ o $L$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada como $N_A$, se define como el número de entidades elementales (átomos, moléculas, iones, electrones) contenidas en un mol de sustancia. Es la constante de proporcionalidad que relaciona la cantidad de sustancia ($n$) con el número de partículas ($N$).
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+N_A \approx 6.022 \times 10^{23} \text{ mol}^{-1} \quad \text{o} \quad 6.02214 \times 10^{23} \text{ mol}^{-1}
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Definición Exacta (SI 2019)}
+Desde el SI 2019, fija exactamente la unidad del mol:
+\begin{equation*}
+N_A = 6.02214076 \times 10^{23} \text{ mol}^{-1}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Exacto sin incertidumbre ($u_r = 0$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Constante Universal de los Gases Ideales ($R$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada por $R$, es la constante de proporcionalidad en la ecuación de estado de los gases ideales ($P V = n R T$). Se obtiene directamente como el producto de la constante de Avogadro por la constante de Boltzmann ($R = N_A k_B$).
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+R \approx 8.314 \text{ J}/(\text{mol}\cdot\text{K}) \quad \text{o} \quad 0.08206 \text{ L}\cdot\text{atm}/(\text{mol}\cdot\text{K})
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Valor Exacto (SI 2019)}
+Al ser el producto exacto de $N_A$ y $k_B$, su valor es exactamente:
+\begin{equation*}
+R = 8.31446261815324 \text{ J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Valor exacto por definición derivada ($u_r = 0$).
+
+\end{document}

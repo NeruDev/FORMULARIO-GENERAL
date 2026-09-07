@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Mecánica}}
+\author{Física General y Teórica}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La mecánica es la rama de la física que estudia el movimiento de los cuerpos, las fuerzas que lo producen y los estados de equilibrio. A continuación se presenta un compendio organizado por temas y subtemas con el desarrollo de las fórmulas, sus unidades básicas en el Sistema Internacional (SI) y sus autores.
+
+\section{Cinemática}
+
+\subsection{Movimiento Rectilíneo Uniforme (MRU)}
+
+\subsubsection*{1. Posición y Desplazamiento [$x$]}
+\paragraph*{Unidades básicas del SI:} $[\text{m}]$
+\paragraph*{Explicación:} Describe la posición en función del tiempo para un móvil que se desplaza a velocidad constante en una trayectoria rectilínea.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Forma estándar:} \quad & x(t) = x_0 + v t \\
+\text{Desplazamiento:} \quad & \Delta x = x - x_0 = v \Delta t \\
+\text{Velocidad constante:} \quad & v = \frac{\Delta x}{\Delta t} = \frac{x - x_0}{t - t_0}
+\end{align*}
+donde $x$ es la posición final, $x_0$ la posición inicial, $v$ la velocidad y $t$ el tiempo.
+\paragraph*{Autor:} Galileo Galilei.
+
+\subsection{Movimiento Rectilíneo Uniformemente Acelerado (MRUA)}
+
+\subsubsection*{2. Ecuaciones del MRUA [$x, v, a$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Posición [$x$]: $[\text{m}]$
+    \item Velocidad [$v$]: $[\text{m}\cdot\text{s}^{-1}]$
+    \item Aceleración [$a$]: $[\text{m}\cdot\text{s}^{-2}]$
+\end{itemize}
+\paragraph*{Explicación:} Describen el movimiento de un objeto sometido a una aceleración constante en línea recta.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Velocidad en función del tiempo:} \quad & v(t) = v_0 + a t \\
+\text{Posición en función del tiempo:} \quad & x(t) = x_0 + v_0 t + \frac{1}{2} a t^2 \\
+\text{Ecuación independiente del tiempo (Torricelli):} \quad & v^2 = v_0^2 + 2 a (x - x_0) \\
+\text{Posición en función de velocidad media:} \quad & x - x_0 = \left( \frac{v_0 + v}{2} \right) t
+\end{align*}
+donde $v_0$ es la velocidad inicial y $a$ es la aceleración constante.
+\paragraph*{Autor:} Galileo Galilei / Evangelista Torricelli.
+
+\section{Dinámica y Leyes del Movimiento}
+
+\subsection{Leyes de Newton}
+
+\subsubsection*{3. Leyes del Movimiento de Newton [$F, p$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Fuerza [$F$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-2}]$
+    \item Cantidad de movimiento / Impulso [$p, J$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-1}]$
+\end{itemize}
+\paragraph*{Explicación:} Principios fundamentales que relacionan las fuerzas actuantes sobre un cuerpo con el movimiento que este experimenta.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Primera Ley (Inercia):} \quad & \sum \mathbf{F} = 0 \implies \mathbf{v} = \text{constante} \\
+\text{Segunda Ley (Forma escalar estándar):} \quad & F = m a \\
+\text{Segunda Ley (Forma vectorial):} \quad & \mathbf{F}_{\text{neta}} = m \mathbf{a} = \frac{d\mathbf{p}}{dt} \\
+\text{Segunda Ley para masa variable:} \quad & \mathbf{F}_{\text{neta}} = m \frac{d\mathbf{v}}{dt} + \mathbf{v} \frac{dm}{dt} \\
+\text{Tercera Ley (Acción y Reacción):} \quad & \mathbf{F}_{A \to B} = -\mathbf{F}_{B \to A}
+\end{align*}
+donde $m$ es la masa e $\mathbf{p} = m \mathbf{v}$ es el momento lineal.
+\paragraph*{Autor:} Isaac Newton.
+
+\section{Gravitación Universal}
+
+\subsection{Ley de la Gravitación Universal}
+
+\subsubsection*{4. Fuerza Gravitatoria y Campo Gravitatorio [$F_g, g, U_g$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Fuerza gravitatoria [$F_g$]: $[\text{kg}\cdot\text{m}\cdot\text{s}^{-2}]$
+    \item Campo / Aceleración gravitatoria [$g$]: $[\text{m}\cdot\text{s}^{-2}]$
+    \item Energía potencial gravitatoria [$U_g$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}]$
+\end{itemize}
+\paragraph*{Explicación:} Establece la atracción mutua entre dos masas puntuales separadas por una distancia determinada.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Fuerza gravitatoria escalar:} \quad & F_g = G \frac{m_1 m_2}{r^2} \\
+\text{Fuerza gravitatoria vectorial:} \quad & \mathbf{F}_{12} = -G \frac{m_1 m_2}{r^2} \hat{\mathbf{r}}_{12} \\
+\text{Intensidad de campo gravitatorio:} \quad & \mathbf{g} = -G \frac{M}{r^2} \hat{\mathbf{r}} \\
+\text{Energía potencial gravitatoria universal:} \quad & U_g = -G \frac{m_1 m_2}{r}
+\end{align*}
+donde $G$ es la constante de gravitación universal y $r$ la distancia entre los centros de masa.
+\paragraph*{Autor:} Isaac Newton.
+
+\section{Trabajo, Energía y Potencia}
+
+\subsection{Energía Mecánica y Trabajo}
+
+\subsubsection*{5. Trabajo, Energía Cinética y Potencia [$W, E_k, P$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Trabajo y Energía [$W, E_k, E_p$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-2}]$
+    \item Potencia [$P$]: $[\text{kg}\cdot\text{m}^2\cdot\text{s}^{-3}]$
+\end{itemize}
+\paragraph*{Explicación:} Cuantifica la transferencia de energía realizada por una fuerza y la capacidad de realizar un trabajo.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Trabajo de fuerza constante:} \quad & W = \mathbf{F} \cdot \mathbf{\Delta r} = F \Delta r \cos\theta \\
+\text{Trabajo de fuerza variable:} \quad & W = \int_{r_1}^{r_2} \mathbf{F} \cdot d\mathbf{r} \\
+\text{Energía cinética traslacional:} \quad & E_k = \frac{1}{2} m v^2 \\
+\text{Teorema del trabajo y la energía:} \quad & W_{\text{neto}} = \Delta E_k = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_i^2 \\
+\text{Potencia media y instantánea:} \quad & P_{\text{med}} = \frac{\Delta W}{\Delta t}, \quad P = \frac{dW}{dt} = \mathbf{F} \cdot \mathbf{v}
+\end{align*}
+\paragraph*{Autor:} James Prescott Joule / Gaspard-Gustave de Coriolis.
+
+\end{document}

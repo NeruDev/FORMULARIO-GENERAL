@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Matemáticas en Álgebra}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+El álgebra estudia las estructuras, relaciones y cantidades a través de ecuaciones y abstracciones numéricas. Dentro del álgebra clásica, abstracta y lineal, emergen constantes algebraicas y complejas clave que determinan la resolución de ecuaciones polinomiales y la extensión de los sistemas numéricos.
+
+\section{Número Áureo / Proporción Dorada ($\phi$ o $\Phi$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+La constante del número áureo se simboliza tradicionalmente con la letra griega phi ($\phi$ o $\Phi$) en honor al escultor griego Fidias. Algebraicamente, es la raíz real positiva de la ecuación cuadrática:
+\begin{equation*}
+x^2 - x - 1 = 0 \implies \phi = \frac{1 + \sqrt{5}}{2}
+\end{equation*}
+Representa una proporción geométrica y algebraica perfecta en la que la razón entre la suma de dos segmentos y el mayor es igual a la razón entre el mayor y el menor ($a+b/a = a/b$). Al ser raíz de un polinomio con coeficientes enteros, es un \textbf{número irracional algebraico}.
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+En diseño conceptual, optimización de estructuras y análisis de patrones:
+\begin{equation*}
+\phi \approx 1.618 \quad \text{o} \quad 1.61803399
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\phi \approx 1.618033988749895
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\phi \approx \; & 1.618033988749894848204586834365638117720309179805762862135448622705260... \\
+& ...46281890244970720720418939113748475
+\end{align*}
+\textbf{Margen de error:} Valor matemático exacto definido algebraicamente (sin margen de error).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Unidad Imaginaria ($i$ o $j$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+La unidad imaginaria se denota con el símbolo $i$ (o $j$ en ingeniería eléctrica e industrial para no confundirla con la corriente eléctrica). Se define fundamentalmente por la relación:
+\begin{equation*}
+i^2 = -1 \implies i = \sqrt{-1}
+\end{equation*}
+Su introducción amplía el campo de los números reales $\mathbb{R}$ al cuerpo de los números complejos $\mathbb{C}$, permitiendo que todo polinomio no constante con coeficientes complejos tenga al menos una raíz (Teorema Fundamental del Álgebra).
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+Su módulo es exactamente $1$ y su argumento es $\pi/2$ radianes ($90^\circ$). En notación polar o de fasores: $1 \angle 90^\circ$ o $e^{i\pi/2}$.
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\text{Re}(i) = 0.000000000000000, \quad \text{Im}(i) = 1.000000000000000
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{equation*}
+i = 0 + 1i \quad \text{(Exacto por definición estructural)}
+\end{equation*}
+\textbf{Margen de error:} Ninguno (unidad fundamental del sistema complejo).
+
+\end{document}

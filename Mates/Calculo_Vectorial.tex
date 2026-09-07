@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Matemáticas en Cálculo Vectorial}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+El cálculo vectorial extiende el cálculo diferencial e integral a campos escalares y vectoriales en espacios euclídeos multidimensionales ($\mathbb{R}^2, \mathbb{R}^3, \dots$). Las constantes asociadas al cálculo vectorial determinan medidas topológicas fundamentales como el área de superficies cerradas, volúmenes integrales y constantes de integración geométrica espacial.
+
+\section{Área de la Esfera Unitaria ($A_{S^2} = 4\pi$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+El área de la superficie de la esfera de radio unidad ($r=1$) en $\mathbb{R}^3$, denotada por $A_{S^2}$, se calcula mediante la integral de superficie cerrada:
+\begin{equation*}
+A_{S^2} = \iint_{S^2} dS = \int_{0}^{2\pi} \int_{0}^{\pi} \sin\theta \, d\theta \, d\phi = 4\pi
+\end{equation*}
+Representa la medida total del ángulo sólido que rodea completamente un punto en el espacio tridimensional ($4\pi$ estereorradianes) y aparece como factor de normalización fundamental en el Teorema de la Divergencia de Gauss y la ley de Coulomb.
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+\begin{equation*}
+4\pi \approx 12.5664 \quad \text{o} \quad 12.56637061
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+4\pi \approx 12.566370614359173
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+4\pi \approx \; & 12.5663706143591729538505735331180115367886775975004232838997783692312... \\
+& ...656251448359445130136848847231920860
+\end{align*}
+\textbf{Margen de error:} Constante matemática pura ($4 \times \pi$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Volumen de la Bola Unitaria ($V_{B^3} = \frac{4}{3}\pi$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+El volumen de la bola sólida de radio $r=1$ en $\mathbb{R}^3$, denotado por $V_{B^3}$, se obtiene integrando el elemento de volumen en coordenadas esféricas:
+\begin{equation*}
+V_{B^3} = \iiint_{B^3} dV = \int_{0}^{1} r^2 dr \int_{0}^{\pi} \sin\theta d\theta \int_{0}^{2\pi} d\phi = \frac{4}{3}\pi
+\end{equation*}
+Es la constante volumétrica fundamental en teoremas de integración vectorial, dinámica de fluidos y teoría del potencial.
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+\begin{equation*}
+\frac{4}{3}\pi \approx 4.1888 \quad \text{o} \quad 4.18879020
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\frac{4}{3}\pi \approx 4.188790204786391
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\frac{4}{3}\pi \approx \; & 4.1887902047863909846168578443726705122628925325001410946332594564104... \\
+& ...218750482786481710045616282410640287
+\end{align*}
+\textbf{Margen de error:} Constante matemática exacta (sin margen de error).
+
+\end{document}

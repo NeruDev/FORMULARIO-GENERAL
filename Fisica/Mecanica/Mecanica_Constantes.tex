@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Físicas en Mecánica}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La mecánica es la rama de la física que estudia el movimiento de los cuerpos, las fuerzas que lo producen y los estados de equilibrio. En este documento se presentan constantes cinemáticas, dinámicas y gravitacionales fundamentales con sus valores exactos o valores de referencia CODATA.
+
+\section{Aceleración Estándar de la Gravedad ($g_n$ o $g$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Simbolizada como $g_n$ (o simplemente $g$), representa la aceleración nominal que experimenta un cuerpo en caída libre al nivel del mar y a una latitud de $45^\circ$ en el campo gravitatorio terrestre. Fue fijada formalmente por la $3.^{\text{a}}$ Conferencia General de Pesas y Medidas (CGPM) en 1901 como un estándar de conversión entre la masa y el peso.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+g_n \approx 9.81 \text{ m/s}^2 \quad \text{o} \quad 9.80665 \text{ m/s}^2
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Definición Exacta}
+\begin{equation*}
+g_n = 9.80665 \text{ m/s}^2 \quad \text{(Exacto por definición de la CGPM)}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:} Exacto sin incertidumbre experimental por definición estándar ($u_r = 0$).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Constante de Gravitación Universal ($G$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada con la letra $G$, es la constante de proporcionalidad que aparece en la Ley de Gravitación Universal de Isaac Newton y en la Ecuación de Campo de Einstein de la Relatividad General:
+\begin{equation*}
+F = G \frac{m_1 m_2}{r^2}
+\end{equation*}
+Determina la intensidad del acoplamiento gravitatorio entre dos masas cualesquiera en el universo.
+
+\subsection*{2. Valores Típicos en Ingeniería y Ciencia}
+\begin{equation*}
+G \approx 6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2} \quad \text{o} \quad \text{N}\cdot\text{m}^2/\text{kg}^2
+\end{equation*}
+
+\subsection*{3. Decimales Completos y Valor CODATA (2018/2022)}
+\begin{equation*}
+G = 6.67430 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}
+\end{equation*}
+\textbf{Incertidumbre / Margen de Error:}
+\begin{align*}
+\text{Incertidumbre estándar absoluta: } & u(G) = 0.00015 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2} \\
+\text{Incertidumbre relativa: } & u_r = 2.2 \times 10^{-5} \quad (22 \text{ ppm})
+\end{align*}
+
+\end{document}

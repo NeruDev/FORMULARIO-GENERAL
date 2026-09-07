@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Compendio de Fórmulas de Acústica}}
+\author{Física Acústica y Ondas}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+La acústica es la rama de la física que estudia las ondas mecánicas que se propagan a través de la materia (gases, líquidos y sólidos). A continuación se presentan las fórmulas fundamentales de propagación, intensidad y efectos acústicos con sus unidades del SI.
+
+\section{Ondas Sonoras y Propagación}
+
+\subsection{Velocidad e Intensidad del Sonido}
+
+\subsubsection*{1. Velocidad del Sonido e Intensidad Sonora [$c_s, I, L_I$]}
+\paragraph*{Unidades básicas del SI:}
+\begin{itemize}
+    \item Velocidad del sonido [$c_s$]: $[\text{m}\cdot\text{s}^{-1}]$
+    \item Intensidad sonora [$I$]: $[\text{kg}\cdot\text{s}^{-3}]$
+    \item Nivel de intensidad sonora [$L_I$]: Adimensional $[1]$ (expresado en decibelios, $\text{dB}$)
+\end{itemize}
+\paragraph*{Explicación:} Define la rapidez con la que se propaga la onda de presión en un medio elástico y la potencia acústica transportada por unidad de área.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Velocidad en fluidos (Ecuación de Laplace):} \quad & c_s = \sqrt{\frac{K}{\rho}} = \sqrt{\frac{\gamma R T}{M}} \\
+\text{Velocidad en sólidos (barra delgada):} \quad & c_s = \sqrt{\frac{E}{\rho}} \\
+\text{Intensidad sonora instantánea:} \quad & I = \langle p(t) v(t) \rangle = \frac{p_{\text{rms}}^2}{\rho c_s} \\
+\text{Nivel de presión y de intensidad ($dB_{SPL}$):} \quad & L_I = 10 \log_{10} \left( \frac{I}{I_0} \right) = 20 \log_{10} \left( \frac{p_{\text{rms}}}{p_0} \right)
+\end{align*}
+donde $K$ es el módulo de compresibilidad, $E$ el módulo de Young, $\rho$ la densidad del medio, $p_{\text{rms}}$ la presión acústica eficaz y $I_0 = 10^{-12} \text{ W/m}^2$ la intensidad de referencia.
+\paragraph*{Autor:} Pierre-Simon Laplace / Isaac Newton.
+
+\section{Fenómenos Ondulatorios y Acústicos}
+
+\subsection{Efecto Doppler}
+
+\subsubsection*{2. Efecto Doppler Acústico [$f'$]}
+\paragraph*{Unidades básicas del SI:} Frecuencia [$f'$]: $[\text{s}^{-1}]$ (Hertz)
+\paragraph*{Explicación:} Aparente cambio de frecuencia de una onda producido por el movimiento relativo entre la fuente emisora y el observador.
+\paragraph*{Desarrollo y Variaciones:}
+\begin{align*}
+\text{Fórmula general (fuente y observador en movimiento):} \quad & f' = f \left( \frac{c_s \pm v_o}{c_s \mp v_s} \right) \\
+\text{Observador móvil, fuente en reposo ($v_s=0$):} \quad & f' = f \left( 1 \pm \frac{v_o}{c_s} \right) \\
+\text{Fuente móvil, observador en reposo ($v_o=0$):} \quad & f' = f \left( \frac{c_s}{c_s \mp v_s} \right)
+\end{align*}
+donde $v_o$ es la velocidad del observador y $v_s$ la velocidad de la fuente respecto al medio.
+\paragraph*{Autor:} Christian Doppler.
+
+\end{document}

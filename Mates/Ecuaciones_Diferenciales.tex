@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Constantes Matemáticas en Ecuaciones Diferenciales}}
+\author{Compendio de Constantes Fundamentales}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+Las ecuaciones diferenciales relacionan funciones con sus derivadas y describen el comportamiento de sistemas dinámicos en física, biología, economía e ingeniería. Las constantes en este ámbito surgen como relaciones universales de bifurcación, invariantes de atractores caóticos o razones de convergencia en sistemas no lineales.
+
+\section{Primera Constante de Feigenbaum ($\delta$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada por la letra griega delta ($\delta$), fue descubierta en 1975 por el físico Mitchell Feigenbaum. Caracteriza el ritmo límite de convergencia al que ocurren las bifurcaciones de duplicación de periodo en sistemas dinámicos no lineales antes de entrar al régimen caótico:
+\begin{equation*}
+\delta = \lim_{k \to \infty} \frac{a_k - a_{k-1}}{a_{k+1} - a_k}
+\end{equation*}
+Es una constante \textbf{universal}: aplica a toda familia de mapas unidimensionales disipativos con un máximo cuadrático único (como el mapa logístico $x_{n+1} = r x_n (1-x_n)$) y a sistemas de ecuaciones diferenciales ordinarias no lineales (como el atractor de Lorenz o las ecuaciones de Rössler).
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+En dinámica no lineal, teoría del caos y estabilidad de sistemas:
+\begin{equation*}
+\delta \approx 4.6692 \quad \text{o} \quad 4.66920161
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\delta \approx 4.669201609102990
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\delta \approx \; & 4.66920160910299067185320382046620161725818557747546863499449233869970... \\
+& ...826227694460492809983177821633512809
+\end{align*}
+\textbf{Margen de error:} Constante matemática universal pura (sin error de medición física).
+
+\vspace{0.8cm}
+\hrule
+\vspace{0.8cm}
+
+\section{Segunda Constante de Feigenbaum ($\alpha$)}
+
+\subsection*{1. Significado, Símbolo y Explicación}
+Representada por la letra griega alfa ($\alpha$), es el factor de escala universal para el ancho del diagrama de bifurcación en sistemas caóticos. Mide la razón entre la distancia del elemento más cercano de la órbita de periodo $2^k$ al punto fijo y la distancia correspondiente en la órbita de periodo $2^{k-1}$:
+\begin{equation*}
+\alpha = \lim_{k \to \infty} \frac{d_k}{d_{k+1}}
+\end{equation*}
+Gobierna la renormalización de escalas en transiciones al caos en ecuaciones diferenciales fuertemente no lineales.
+
+\subsection*{2. Valor Típico en Ingeniería y Ciencia}
+\begin{equation*}
+\alpha \approx 2.5029 \quad \text{o} \quad 2.50290787
+\end{equation*}
+
+\subsection*{3. Valor Exacto a 15 Decimales}
+\begin{equation*}
+\alpha \approx 2.502907875095893
+\end{equation*}
+
+\subsection*{4. Valor Exacto a 100 Decimales}
+\begin{align*}
+\alpha \approx \; & 2.50290787509589282228390287321821578638127137672714997733092023989182... \\
+& ...010260275204212739268846931536767439
+\end{align*}
+\textbf{Margen de error:} Constante matemática exacta (sin margen de error).
+
+\end{document}

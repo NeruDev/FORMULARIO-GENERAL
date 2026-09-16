@@ -65,3 +65,65 @@ En la sección de procesos termodinámicos cuasiestáticos de los compendios de 
 
 ## Resumen de Estado
 Todos los archivos en `latex/Mates/` y `latex/Fisica/` han sido validados sintáctica y conceptualmente, estando libres de erratas y listos para servir de base al sistema de clasificación modular detallado en `ARCHITECTURE.md`.
+
+---
+
+## 4. Errores y Hallazgos de la Migración LaTeX → Typst
+
+Registro de los problemas detectados **durante la conversión** de `latex/` a `typst/`
+(ver `typst_plan.md` para el plan y `typst/lib/CONVENCIONES.md` para el contrato aplicado).
+Entorno verificado: **Typst 0.15.1**.
+
+### 4.1 Símbolos de LaTeX que NO existen en Typst 0.15.1
+
+| Comando LaTeX | Error en Typst | Sustituto correcto |
+|---|---|---|
+| `\partial` escrito como `diff` | `unknown variable: diff` | `partial` |
+| `\hbar` | `unknown variable: hbar` | `planck` |
+| `\varphi` | `unknown variable: varphi` | `phi` (y `\phi` → `phi.alt`) |
+| `\langle` / `\rangle` escritos como `angle.l` / `angle.r` | `unknown symbol modifier` | `chevron.l` / `chevron.r` |
+
+> Nota: la tentación de usar `diff` para `\partial` proviene de la documentación de Typst sobre
+> diferenciales. En 0.15.1 el símbolo ∂ es `partial`; `diff` no está definido.
+
+### 4.2 Errores de sintaxis de marcado (confusión con Markdown)
+
+| Error | Síntoma | Corrección |
+|---|---|---|
+| `**texto**` para negrita | warning `no text within stars` | `*texto*` (Typst no usa doble asterisco) |
+| `>` repetido en cada línea de una cita | la cita muestra `>` literal | `>` solo en la **primera** línea del bloque |
+| Texto multi-letra sin comillas en math (`máx`, `ABCD`) | `unknown variable: máx` | `"máx"`, `A B C D` |
+| `abs(chevron.l u, v chevron.r)` | `unexpected argument` | dentro de llamadas math la coma separa argumentos: usar los delimitadores directamente |
+
+### 4.3 Trampas de verificación (importante para futuras sesiones)
+
+1. **Un archivo `.typ` vacío compila correctamente** y produce un PDF válido de cero páginas.
+   Por tanto, comprobar solo el código de salida de `typst compile` **no** demuestra que un módulo
+   esté migrado. La verificación debe comprobar además el **tamaño / número de líneas** o el
+   **conteo de bloques** (`/// id:`).
+2. **El sandbox de Typst** requiere `--root` cuando un módulo importa el helper compartido
+   `typst/lib/formulas.typ`, porque la raíz por defecto es la carpeta del propio archivo.
+   Un `typst.toml` en la raíz **no** modifica esta inferencia. Comando correcto:
+   `typst compile --root <repo>/typst <archivo.typ> <salida.pdf>`
+3. **Precedencia de fracciones:** `x^2/a^2 + y^2/b^2` se resuelve correctamente (los operadores
+   `+` y `-` cortan la fracción), pero `b/a (x - h)` **continúa el denominador** y produce
+   `b/(a(x-h))`. En esos casos hay que usar `frac(b, a) (x - h)`.
+
+### 4.4 Resumen de la migración ejecutada
+
+- **29 módulos** `.typ` escritos y compilando **sin errores ni warnings**.
+- **1 007 bloques de fórmulas** migrados (contados por sus metadatos `/// id:`).
+- Módulos nuevos creados: `mates/00_transversales/`, `mates/12_metodos_numericos/`,
+  `fisica/00_transversales/`, `fisica/09_relatividad_y_nucleos/`.
+- Carpetas renombradas para eliminar espacios en las rutas: `06_algebra lineal` →
+  `06_algebra_lineal` y `07_calculo diferencial` → `07_calculo_diferencial`.
+- Infraestructura añadida: `typst/lib/formulas.typ` (helpers) y `typst/lib/CONVENCIONES.md`
+  (contrato de conversión), más `typst/typst.toml`.
+
+### 4.5 Pendiente conocido
+
+- `typst/mates/11_probabilidad_estadistica/probabilidad_estadistica.typ` contiene únicamente un
+  **marcador documentado**: no existe ningún compendio de Probabilidad y Estadística en `latex/`
+  (ni en `formulario_mates.tex` ni en los formularios por nivel). El contenido debe redactarse en
+  una sesión posterior a partir de `ARCHITECTURE.md` §2.1.11.
+

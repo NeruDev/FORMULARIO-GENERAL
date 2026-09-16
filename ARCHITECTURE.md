@@ -42,8 +42,10 @@ La clasificación para matemáticas se organiza en los siguientes módulos canó
     - EDOs de primer orden (variables separables, exactas, lineales), EDOs de orden superior con coeficientes constantes, transformada de Laplace, sistemas de EDOs.
 11. **Probabilidad y Estadística (`11_Probabilidad_Estadistica`)** *(Módulo recomendado)*
     - Estadística descriptiva (media, mediana, moda, varianza, desviación estándar), combinatoria (permutaciones y combinaciones), probabilidad condicional, regla de Bayes, distribuciones discretas y continuas (Binomial, Poisson, Normal).
-
-### 2.2 Estrategia para Fórmulas Multi-categoría (Cross-Domain)
+12. **Métodos Numéricos (`12_Metodos_Numericos`)**
+   - Raíces de ecuaciones (bisección, Newton-Raphson, secante, punto fijo), interpolación (Lagrange, Newton, splines), integración y diferenciación numérica (trapecio, Simpson), métodos de Euler y Runge-Kutta, resolución numérica de sistemas lineales.
+13. **Conceptos Transversales (`00_Transversales`)**
+   - Identidades maestras y fórmulas puente entre módulos: Identidad de Euler, series de Taylor/Maclaurin, relación circular↔hiperbólica, fórmulas de prostaféresis y sustituciones trigonométricas.
 
 En matemáticas, muchas fórmulas pertenecen simultáneamente a varias disciplinas (ej. Identidad de Euler $e^{i\pi} + 1 = 0$ que une Aritmética, Álgebra, Trigonometría y Análisis Complejo; o las sustituciones trigonométricas en Cálculo Integral).
 
@@ -121,51 +123,95 @@ Se deben incluir anotaciones estandarizadas en las secciones o subsecciones medi
 
 ---
 
-## 4. Estructura Propuesta de Directorios (A Futuro)
+## 4. Estructura de Directorios
 
-Para cuando se ejecute la reestructuración física de archivos, la jerarquía en la raíz del repositorio seguirá este diseño modular:
+La jerarquía **real y canónica** del repositorio es la siguiente. `typst/` es la **clasificación
+canónica por materia y rama de estudio** y define la arquitectura modular. `latex/` conserva la
+clasificación por **nivel de dificultad**. `Mates/` y `Fisica/` en la raíz conservan los archivos
+LaTeX por materia, que aportan constantes, unidades, notas y atribución de autor.
 
 ```text
 /
 ├── ARCHITECTURE.md          # Especificación de la arquitectura modular (este archivo)
 ├── ERRORES.md               # Registro histórico de revisión y corrección de erratas
-├── Mates/                   # Módulos independientes de Matemáticas
-│   ├── 01_Aritmetica/
-│   ├── 02_Algebra/
-│   ├── 03_Trigonometria/
-│   ├── 04_Geometria_Euclidiana/
-│   ├── 05_Geometria_Analitica/
-│   ├── 06_Algebra_Lineal/
-│   ├── 07_Calculo_Diferencial/
-│   ├── 08_Calculo_Integral/
-│   ├── 09_Calculo_Vectorial/
-│   ├── 10_Ecuaciones_Diferenciales/
-│   ├── 11_Probabilidad_Estadistica/
-│   └── 00_Transversales/    # Fórmulas e identidades intersecantes
-├── Fisica/                  # Módulos independientes de Física por ramas
-│   ├── 01_Mecanica/
-│   ├── 02_Mecanica_Fluidos/
-│   ├── 03_Termodinamica/
-│   ├── 04_Electromagnetismo/
-│   ├── 05_Ondas_y_Acustica/
-│   ├── 06_Optica/
-│   ├── 07_Fisica_Moderna_Cuantica/
-│   └── 08_Relatividad_y_Nucleos/
-└── latex/                   # Compendios compilables (utilizan \input desde Mates y Fisica)
-    ├── Mates/
-    │   ├── formulario_basico.tex
-    │   ├── formulario_intermedio.tex
-    │   └── formulario_avanzado.tex
-    └── Fisica/
-        ├── formulario_basico.tex
-        ├── formulario_intermedio.tex
-        └── formulario_avanzado.tex
+├── typst_plan.md            # Plan de migración LaTeX -> Typst y conflictos de conversión
+│
+├── typst/                   # CLASIFICACIÓN CANÓNICA POR MATERIA (Typst)
+│   ├── lib/
+│   │   └── formulas.typ     # Helpers comunes (nivel, tema, etiquetas de régimen)
+│   ├── mates/
+│   │   ├── 00_transversales/            # Identidades puente entre módulos
+│   │   ├── 01_aritmetica/
+│   │   ├── 02_algebra/
+│   │   ├── 03_trigonometria/
+│   │   ├── 04_geometria_euclidiana/
+│   │   ├── 05_geometria_analitica/
+│   │   ├── 06_algebra_lineal/
+│   │   ├── 07_calculo_diferencial/
+│   │   ├── 08_calculo_integral/
+│   │   ├── 09_calculo_vectorial/
+│   │   ├── 10_ecuaciones_diferenciales/
+│   │   ├── 11_probabilidad_estadistica/
+│   │   ├── 12_metodos_numericos/
+│   │   └── constantes/
+│   └── fisica/
+│       ├── 00_transversales/            # Fórmulas puente entre ramas
+│       ├── 01_mecanica/
+│       ├── 02_mecanica_fluidos/
+│       ├── 03_termodinamica/
+│       ├── 04_ondas_mecanicas/
+│       ├── 05_optica/
+│       ├── 06_electromagnetismo/
+│       ├── 07_fisica_moderna/
+│       ├── 08_fisica_semiconductores/
+│       ├── 09_relatividad_y_nucleos/
+│       ├── constantes/
+│       └── unidades/
+│
+├── latex/                   # Clasificación por NIVEL DE DIFICULTAD (LaTeX, compilable)
+│   ├── Mates/
+│   │   ├── formulario_mates.tex         # Compendio exhaustivo (fuente primaria)
+│   │   ├── formulario_basico.tex
+│   │   ├── formulario_intermedio.tex
+│   │   ├── formulario_avanzado.tex
+│   │   └── constantes/
+│   └── Fisica/
+│       ├── formulario_fisica.tex        # Compendio exhaustivo (fuente primaria)
+│       ├── formulario_basico.tex
+│       ├── formulario_intermedio.tex
+│       ├── formulario_avanzado.tex
+│       ├── constantes/
+│       └── unidades/
+│
+├── Mates/                   # Fuente LaTeX por materia (notas, constantes, autores)
+└── Fisica/                  # Fuente LaTeX por rama (notas, constantes, unidades)
 ```
+
+### 4.1 Correspondencia de Niveles Didácticos
+
+Los niveles de dificultad de `latex/` se preservan dentro de cada módulo de `typst/` mediante
+sub-encabezados **no indexados**: `Nivel Básico`, `Nivel Intermedio` y `Nivel Avanzado`. De este
+modo la clasificación por materia y la clasificación por nivel conviven en el mismo archivo sin
+duplicar contenido.
+
+### 4.2 Versión Objetivo
+
+Los módulos de `typst/` se escriben contra **Typst 0.15.1**. La versión debe fijarse porque los
+nombres de símbolos cambian entre versiones (p. ej. `sect`→`inter`, `ohm`→`Omega`, `hbar`→`planck`,
+y la eliminación de `degree.c`, `degree.f` y `kelvin`). Ver `typst_plan.md` §10.6 y §11.
 
 ---
 
 ## 5. Conclusión y Siguientes Pasos
 
-Con esta arquitectura definida en `ARCHITECTURE.md` y los errores de código corregidos y registrados en `ERRORES.md`, el repositorio cuenta con:
+Con la arquitectura definida en `ARCHITECTURE.md`, los errores de código corregidos y registrados
+en `ERRORES.md` y el plan de migración detallado en `typst_plan.md`, el repositorio cuenta con:
+
 - Códigos LaTeX totalmente limpios de errores sintácticos (`\sen`) y tipográficos.
-- Una plantilla y guía estándar para descomponer los compendios en módulos limpios y reutilizables en futuras sesiones.
+- Una clasificación canónica en **Typst por materia y rama**, con módulos autónomos y reutilizables.
+- Módulos **transversales** (`00_transversales/`) para las fórmulas que cruzan varias materias,
+  con atribución primaria única y sin duplicar contenido.
+- Etiquetado de régimen (**Física Clásica** / **Moderna** / **Transición**) dentro de los propios
+  archivos `.typ`, conforme al §3.2.
+- El registro permanente de los conflictos de conversión LaTeX → Typst detectados, para ser
+  considerados en futuras sesiones y migraciones.

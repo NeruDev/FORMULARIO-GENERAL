@@ -1,0 +1,5 @@
+[package]
+name = "formulario-general"
+version = "1.0.0"
+entrypoint = "mates/01_aritmetica/aritmetica.typ"
+description = "Formulario general de Matemáticas y Física en Typst, clasificado por materia."

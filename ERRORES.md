@@ -111,19 +111,43 @@ Entorno verificado: **Typst 0.15.1**.
 
 ### 4.4 Resumen de la migración ejecutada
 
-- **29 módulos** `.typ` escritos y compilando **sin errores ni warnings**.
-- **1 007 bloques de fórmulas** migrados (contados por sus metadatos `/// id:`).
+- **28 módulos** `.typ` (+ `typst/lib/formulas.typ` como helper) compilando **sin errores ni warnings**.
+- **1 013 bloques de fórmulas** migrados (contados por sus metadatos `/// id:`, todos únicos).
 - Módulos nuevos creados: `mates/00_transversales/`, `mates/12_metodos_numericos/`,
   `fisica/00_transversales/`, `fisica/09_relatividad_y_nucleos/`.
 - Carpetas renombradas para eliminar espacios en las rutas: `06_algebra lineal` →
   `06_algebra_lineal` y `07_calculo diferencial` → `07_calculo_diferencial`.
 - Infraestructura añadida: `typst/lib/formulas.typ` (helpers) y `typst/lib/CONVENCIONES.md`
   (contrato de conversión), más `typst/typst.toml`.
+- **Unificación con `origin/main` (2026-09-16):** el PR #2 del bot `google-labs-jules` fue auditado
+  en `REVISION_REMOTO.md` y descartado como contenido (merge `-s ours`), salvo el hueco real de
+  `mates/11` (6 bloques nuevos). La versión local quedó como canónica.
 
-### 4.5 Pendiente conocido
+### 4.5 Pendientes conocidos
 
-- `typst/mates/11_probabilidad_estadistica/probabilidad_estadistica.typ` contiene únicamente un
-  **marcador documentado**: no existe ningún compendio de Probabilidad y Estadística en `latex/`
-  (ni en `formulario_mates.tex` ni en los formularios por nivel). El contenido debe redactarse en
-  una sesión posterior a partir de `ARCHITECTURE.md` §2.1.11.
+- `typst/mates/11_probabilidad_estadistica/probabilidad_estadistica.typ`: **parcialmente cubierto**
+  (6 bloques `math.prob.*`). Faltan, según `ARCHITECTURE.md` §2.1.11: combinatoria (permutaciones y
+  combinaciones) y distribuciones discretas (Binomial y Poisson); no hay compendio fuente en `latex/`.
+- **Numeración duplicada §11:** `mates/12_metodos_numericos` numera sus temas como `11.x` (herencia
+  del compendio LaTeX) y `mates/11` usa `11.x`. Decidir si se renumera `mates/12` a `§12.x`
+  (afecta solo a títulos `#tema`, no a los ids `math.num.*`).
+
+### 4.6 Auditoría del PR #2 remoto (bot `google-labs-jules`) — 2026-09-16
+
+El remoto publicó 25 archivos `.typ` «rellenados» mecánicamente desde las fuentes LaTeX
+(`b1e2e35`, merge `3b8abf8`). Detalle completo en `REVISION_REMOTO.md`. Trampas verificadas
+en ese contenido (no usarlo como plantilla):
+
+| Patrón del contenido remoto | Síntoma en Typst 0.15.1 |
+|---|---|
+| `\text{...}`, `\frac`, `\vec`, `\hbar`, `\mu_0`, `\operatorname`, `\binom`, `\begin{cases}` | `unknown variable` / `unexpected token` (**289 residuos LaTeX** en el conjunto) |
+| `T(^\circ"C")` | `error: unexpected hat` |
+| `$\vec{D*$`, `\text{porcentaje*$` (negrita `*` sin cerrar dentro del math) | `error: unclosed delimiter` |
+| `vec(F)`, `bold(x)` para vectores | prohibido en el proyecto: usar `arrow(F)` y `bold(upright(x))` |
+| `#table(columns: 6, …)` sin `table.header`; frontmatter `% ---` | formato inconsistente con el contrato local |
+| Carpetas con espacio (`06_algebra lineal/`) | rutas frágiles; ya normalizadas a guion bajo |
+
+Evidencia: **4 de 4 muestras compiladas fallan** (22, 26, 5 y 1 errores). Regla derivada:
+ningún PR que toque `typst/**` se acepta sin `typst compile --root <repo>/typst` y sin conteo de
+bloques `/// id:` (un `.typ` vacío compila y produce un PDF de cero páginas).
 
